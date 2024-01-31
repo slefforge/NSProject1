@@ -1,1 +1,1 @@
-env x='() { :;}; echo vulnerable' bash -c "echo test"
+env x='() { :;}; /bin/task2 plefforge3' bash -c "echo test"
